@@ -126,7 +126,7 @@ mynums - 5
 mynums / 2
 
 ```
-## 7️⃣ Indexing
+## Indexing
 
 Access elements using square brackets.
 
