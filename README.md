@@ -31,8 +31,7 @@ r-learning-journey/
 ├── data/            # simulated prosody data + generation script
 └── README.md
 ```
-
-*(Adjust these folder names to match what you actually end up using — or drop the section entirely if you'd rather keep everything flat.)*
+(This might change over time).
 
 ## Tools
 
