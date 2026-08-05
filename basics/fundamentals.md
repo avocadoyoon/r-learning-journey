@@ -2,7 +2,7 @@
 
 Hi! I’m currently learning R from scratch — and this repository is basically my brain in progress.
 
-If you already know Python, congrats… you’re at a slight advantage 😌
+If you already know Python, congrats… you’re at a slight advantage.
 
 R has its own quirks, but some things will feel familiar.
 
@@ -11,14 +11,14 @@ I’m documenting everything as I go — yes, even the *very basic stuff* — be
 1. Future me will forget
 2. Someone else might find it helpful too
 
-The dataset I’m using (`prosody_practice_table.csv`) is included in this repo, but feel free to use your own. I tend to learn better when the data actually relates to my research interests, so here we are.
+The dataset I’m using (`prosody_practice_table.xlsx`) is included in this repo, but feel free to use your own. I tend to learn better when the data actually relates to my research interests, so here we are.
 
 This is not meant to be perfect or polished — just real learning, step by step.
 
 So yeah… let’s get into it 🌌
 
 
-## 1️⃣ Basic Arithmetic in R
+## Basic Arithmetic in R
 
 R works like a calculator.
 
@@ -36,7 +36,7 @@ To be able to see the output, do ```Alt + Enter```.
 sqrt(4)     # square root
 abs(-10)    # absolute value
 ```
-## 2️⃣ Variables
+## Variables
 
 Variables store values.
 ```
@@ -63,7 +63,7 @@ ls()
 
 ```
 
-## 3️⃣ Vectors
+## Vectors
 
 A vector is a list of values of the same type.
 
@@ -86,7 +86,7 @@ class(x)
 ```
 
 
-## 4️⃣ Sequences
+## Sequences
 
 The colon(:) operator creates sequences.
 
@@ -101,7 +101,7 @@ Output:
 10 9 8 7 6 5 4 3 2 1
 ```
 
-## 5️⃣ Summary Statistics
+## Summary Statistics
 
 Common statistical functions:
 
@@ -116,7 +116,7 @@ median(mynums)
 
 ```
 
-## 6️⃣ Vectorized Operations
+## Vectorized Operations
 
 Operations apply to all elements of a vector.
 
@@ -146,7 +146,7 @@ mynums[-1]
 Returns everything except element 1.
 
 
-## 8️⃣ Logical Vectors
+## Logical Vectors
 
 Logical operations return TRUE or FALSE.
 
@@ -169,7 +169,7 @@ mynums != 3
 | `!=`   | not equal        |
 
 
-## 9️⃣ Logical Indexing
+## Logical Indexing
 
 Logical vectors can filter data.
 
@@ -186,7 +186,7 @@ mynums[mynums >= 3]
 
 ```
 
-## 🔟 Character Vectors
+## Character Vectors
 
 Used for text data.
 
@@ -200,7 +200,7 @@ class(gender)  # Check the vector type
 gender[gender == "F"]  # Select values
 
 
-## 1️⃣1️⃣ Factors (Categorical Data)
+## Factors (Categorical Data)
 
 Factors represent categories.
 
@@ -245,7 +245,7 @@ levels(gender) <- c("F","M","not_declared")
 gender[3] <- "not_declared"
 ```
 
-## 1️⃣2️⃣ Data Type Conversion
+## Data Type Conversion
 
 Convert between types.
 
@@ -278,7 +278,7 @@ as.numeric(factor)
 Returns codes, not the labels.
 
 
-## 1️⃣3️⃣ Data Frames
+## Data Frames
 
 A data frame is a table.
 
@@ -310,7 +310,7 @@ str(mydf)
 summary(mydf)
 
 
-## 1️⃣4️⃣ Accessing Data Frame Columns
+## Accessing Data Frame Columns
 
 Use ```$```.
 
@@ -326,7 +326,7 @@ mydf$parti
 mean(mydf$score)
 ```
 
-## 1️⃣5️⃣ Data Frame Indexing
+## Data Frame Indexing
 
 **Rows and columns:**
 
@@ -355,7 +355,7 @@ mydf[mydf$parti == "nur", ]$score
 ```
 
 
-## 1️⃣6️⃣ Working Directory
+## Working Directory
 
 
 **Check current folder:**
@@ -377,7 +377,7 @@ setwd("path")
 ```
 
 
-## 1️⃣7️⃣ Reading Data
+## Reading Data
 
 **Load CSV:**
 
@@ -394,7 +394,7 @@ read.table("file.txt", sep="\t", header=TRUE)
 ```
 
 
-## 1️⃣8️⃣ Inspecting Data
+## Inspecting Data
 
 ```
 head(data)
@@ -406,7 +406,7 @@ summary(data)
 ```
 
 
-## 1️⃣9️⃣ Descriptive Statistics by Group
+## Descriptive Statistics by Group
 
 **Using tapply():**
 
@@ -427,7 +427,7 @@ tapply(!is.na(data$f0_mean_hz), data$group, sum)
 ```
 
 
-## 2️⃣0️⃣ Visualization
+## Visualization
 
 **Histogram**
 
@@ -457,7 +457,7 @@ boxplot(f0_mean_hz ~ group, data = prosody_practice_table)
 ```
 
 
-## 2️⃣1️⃣ Linear Regression
+## Linear Regression
 
 **Set reference level:**
 
@@ -510,7 +510,7 @@ predict(m1,
 
 ```
 
-## 2️⃣2️⃣ Installing Packages
+## Installing Packages
 
 Packages extend R functionality.
 
@@ -528,7 +528,7 @@ library(dplyr)
 ```
 
 
-## ⭐ Key Concepts Learned
+## Key Concepts Learned
 
 From these scripts you covered:
 
@@ -554,7 +554,7 @@ From these scripts you covered:
 
 - packages
 
-That’s already a very solid R foundation.
+
 
 
 
