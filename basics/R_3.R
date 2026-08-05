@@ -36,8 +36,6 @@ prosody_practice_table
 # read.csv(), which automatically interprets any text column as factor. 
 # So, before the data frame was converted into a tibble, the character-to-factor conversion has already happened.
 
-# To avoid this and save yourself the conversion step, use read_csv()from the 
-
 prosody_practice_table <- read_csv('prosody_practice_table')
 
 # read_csv() runs faster than read.csv(), and it provides a progress bar for large datasets. 
