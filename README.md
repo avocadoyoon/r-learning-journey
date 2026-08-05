@@ -1,133 +1,51 @@
-## 📊 R Statistics & Data Analysis Learning Journey
+# r-learning-journey
 
-Welcome! This repository documents my learning process with R (programming language) for statistical analysis, data exploration, and research applications.
+A personal, open-ended record of me learning R. This repo is not a course, a package, or a tutorial series — it's a working notebook. Scripts land here as I write them, in whatever order I happen to learn things.
 
-The goal of this project is to build strong foundations in data analysis and statistical modeling while documenting my progress through structured scripts and practice analyses.
+## What's in here
 
-## 🧠 Topics Covered
+Roughly two kinds of files:
 
-This repository is organized chronologically as I progressed through learning R.
+**1. Fundamentals**
+Short scripts where I work through the basics: vectors and data types, subsetting, control flow, writing functions, `apply`/`map` family, reading and writing files, and general "how does this actually behave" experiments.
 
-## 📁 00 – Environment Basics
+**2. Practice on a synthetic prosody dataset**
+Most of the applied work uses a **fake prosody dataset I generated myself**. It's designed to look like the kind of data you'd get from an annotated speech corpus (speakers, items, conditions, f0 and duration measures), which makes it a good sandbox for:
 
-- Arithmetic operations
+- data wrangling and reshaping (`dplyr`, `tidyr`)
+- plotting, mostly `ggplot2` — distributions, group comparisons, faceting, custom themes
+- descriptive and inferential statistics
+- linear mixed-effects models (`lme4`, `lmerTest`) with random effects for speaker and item
+- model checking, diagnostics, and interpreting output
 
-- Variable assignment
+> ⚠️ **The data is not real.** It was simulated for practice only. Nothing here should be read as a finding about prosody, speech, or any language.
 
-- Managing workspace objects
+## Structure
 
-## 📁 01 – Vectors & Data Types
+```
+r-learning-journey/
+├── basics/          # fundamentals, syntax, small exercises
+├── wrangling/       # cleaning and reshaping practice
+├── plots/           # ggplot2 practice
+├── models/          # statistics and mixed models
+├── data/            # simulated prosody data + generation script
+└── README.md
+```
 
-- Numeric vectors
+*(Adjust these folder names to match what you actually end up using — or drop the section entirely if you'd rather keep everything flat.)*
 
-- Character vectors
+## Tools
 
-- Logical vectors
+Written in R (RStudio). Packages that show up most often:
 
-- Factors
+`tidyverse` · `ggplot2` · `dplyr` · `tidyr` · `lme4` · `lmerTest` · `emmeans` · `broom`
 
-- Indexing and subsetting
+## Notes on how to read this repo
 
-## 📁 02 – Data Structures
+- Scripts are **exploratory**. There's trial and error, commented-out lines, and things I later did better elsewhere. That's intentional — the mistakes are part of the record.
+- Topics are **not sequential**. A file from last month might be more advanced than one from this week.
+- Older scripts don't get retroactively cleaned up. If something looks clumsy, it probably reflects what I knew at the time.
 
-- Data frames
+## Why this exists
 
-- Matrices
-
-- Data organization
-
-## 📁 03 – Data Exploration
-
-- Summary statistics
-
-- Data inspection (summary(), str(), names())
-
-- Filtering and indexing
-
-## 📁 04 – Data Visualization
-
-- Histograms
-
-- Boxplots
-
-- Scatterplots
-
-## 📁 05 – Programming Concepts
-
-- Logical operators
-
-- Functions
-
-- Conditional statements
-
-- Apply family (lapply, sapply, tapply)
-
-## 📁 06 – Simulation & Probability
-
-- Random sampling
-
-- Probability distributions
-
-- Simulation experiments
-
-## 📁 07 – Dates & Time
-
-- Date objects
-
-- Time calculations
-
-- Time differences
-
-## 📁 08 – Regression Models
-
-- Simple linear regression
-
-- Multiple regression
-
-- Model diagnostics and assumptions
-
-## 📁 09 – Linguistic Data Practice
-Practice statistical analysis using a fake prosody dataset, including:
-
-- Linear regression modeling
-
-- Model diagnostics
-
-- Visualization of acoustic measures
-
-## 🧪 Example Analysis
-
-A small analysis report created using R Markdown demonstrates a complete workflow:
-
-- Data → Visualization → Statistical Modeling → Interpretation
-
-This report showcases how R can be used for linguistic data analysis and research practice.
-
-## 🛠 Tools Used
-
-- R (programming language)
-
-- RStudio
-
-- GitHub
-
-## 🎯 Goals of This Repository
-
-✔ Document my learning progress in R
-✔ Practice statistical analysis and programming
-✔ Build reproducible analysis workflows
-✔ Create a portfolio for data analysis and research projects
-
-## 📌 Future Additions
-
-Coming soon as I continue learning:
-
-- Data visualization with advanced plotting
-
-- Data wrangling techniques
-
-- Text and neuro/psycholinguistic and data analysis
-
-- Larger statistical projects
-
-💡 This repository reflects an ongoing learning journey, where each script builds upon previous concepts while applying statistical methods to real-world datasets.
+Mostly for myself: to keep track of what I've tried, to have somewhere to look things up, and to see progress over time. If someone else finds a snippet useful, that's a bonus.
