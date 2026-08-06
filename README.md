@@ -1,50 +1,40 @@
-# r-learning-journey
+# Descriptive statistics for language-background data
 
-A personal, open-ended record of me learning R. This repo is not a course, a package, or a tutorial series — it's a working notebook. Scripts land here as I write them, in whatever order I happen to learn things.
+A single, self-contained R script for summarising participant-level language
+background data: age of acquisition, language use across the lifespan,
+self-rated proficiency, and group comparisons.
 
-## What's in here
+## Running it
 
-Roughly two kinds of files:
-
-**1. Fundamentals**
-Short scripts where I work through the basics: vectors and data types, subsetting, control flow, writing functions, `apply`/`map` family, reading and writing files, and general "how does this actually behave" experiments.
-
-**2. Practice on a synthetic prosody dataset**
-Most of the applied work uses a **fake prosody dataset I generated myself**. It's designed to look like the kind of data you'd get from an annotated speech corpus (speakers, items, conditions, f0 and duration measures), which makes it a good sandbox for:
-
-- data wrangling and reshaping (`dplyr`, `tidyr`)
-- plotting, mostly `ggplot2` — distributions, group comparisons, faceting, custom themes
-- descriptive and inferential statistics
-- linear mixed-effects models (`lme4`, `lmerTest`) with random effects for speaker and item
-- model checking, diagnostics, and interpreting output
-
-> ⚠️ **The data is not real.** It was simulated for practice only. Nothing here should be read as a finding about prosody, speech, or any language.
-
-## Structure
-
+```r
+source("descriptive_stats.R")
 ```
-r-learning-journey/
-├── basics/          # fundamentals, syntax, small exercises
-├── wrangling/       # cleaning and reshaping practice
-├── plots/           # ggplot2 practice
-├── models/          # statistics and mixed models
-├── data/            # simulated prosody data + generation script
-└── README.md
+
+It runs out of the box on synthetic data that it generates itself — no data
+file needed. To use your own data, edit the CONFIG block near the top:
+
+```r
+USE_DEMO_DATA <- FALSE
+DATA_FILE     <- file.path("data", "your_file.xlsx")
 ```
-(This might change over time).
 
-## Tools
+## What it produces
 
-Written in R (RStudio). Packages that show up most often:
+- Console tables of descriptives, for the full sample and per language group
+- A formatted Word document (`output/descriptive_stats.docx`)
+- Optionally, one CSV per group
 
-`tidyverse` · `ggplot2` · `dplyr` · `tidyr` · `lme4` · `lmerTest` · `emmeans` · `broom`
+## Requirements
 
-## Notes on how to read this repo
+Required: `dplyr`, `tidyr`, `readxl`
+Optional: `flextable`, `officer` (Word export; skipped if absent)
 
-- Scripts are **exploratory**. There's trial and error, commented-out lines, and things I later did better elsewhere. That's intentional — the mistakes are part of the record.
-- Topics are **not sequential**. A file from last month might be more advanced than one from this week.
-- Older scripts don't get retroactively cleaned up. If something looks clumsy, it probably reflects what I knew at the time.
+```r
+install.packages(c("dplyr", "tidyr", "readxl", "flextable", "officer"))
+```
 
-## Why this exists
+## Data
 
-Mostly for myself: to keep track of what I've tried, to have somewhere to look things up, and to see progress over time. If someone else finds a snippet useful, that's a bonus.
+No participant data is included here. The demo dataset is randomly generated,
+paths are relative to the project root, and language labels are generic
+placeholders. Add `data/` and `output/` to `.gitignore` before pushing.
